@@ -11,15 +11,15 @@ while (<>) {
     print "$_\n";
     if($_ =~ m/^
         (?:
-            (?|  # The 1 result
+            (?|  # This is called the branch reset to set the grouping results per branch
                 (?:
-                    (\@SRR|\+SRR)
-                    (.*)$
+                    (\@SRR|\+SRR) #result 1 branch 1
+                    (.*)$  #result 2 branch 1
                 )
                 |
-                (
+                ( # The second result is groupped as one return
                     (?: N|\# )
-                    (?:.{100}) #The 2 result
+                    (?:.{100})  
                 )
             )
         )/x) {
