@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 #
-#
+# you probably want to check : http://perldoc.perl.org/perlre.html
 #
 
 use strict;
